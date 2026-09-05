@@ -13,6 +13,10 @@
       "repositories": 6
     },
     {
+      "language": "Python",
+      "repositories": 2
+    },
+    {
       "language": "Astro",
       "repositories": 1
     },
@@ -23,17 +27,13 @@
     {
       "language": "MATLAB",
       "repositories": 1
-    },
-    {
-      "language": "Python",
-      "repositories": 1
     }
   ],
   "contribution_scope": "Anonymously visible GitHub profile activity, possibly including private contribution counts enabled by the owner; no private details accessed.",
   "contributions": {
     "status": "current",
     "retrieved_on": "2026-09-05",
-    "total": 112,
+    "total": 114,
     "period": "last year, as displayed by GitHub",
     "source": "https://github.com/users/Herd1s/contributions",
     "days": [
@@ -1889,8 +1889,8 @@
       },
       {
         "date": "2026-09-05",
-        "level": 2,
-        "count": 2
+        "level": 3,
+        "count": 4
       }
     ]
   },
@@ -1907,7 +1907,7 @@
     },
     {
       "name": "Herd1s",
-      "language": null,
+      "language": "Python",
       "stars": 0
     },
     {
