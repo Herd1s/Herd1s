@@ -1,0 +1,45 @@
+name: Refresh profile stats
+
+on:
+  schedule:
+    - cron: "23 2 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/update-stats.py
+      - .github/workflows/profile-stats.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-stats
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out the default branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+
+      - name: Generate cards from public GitHub data
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/update-stats.py
+
+      - name: Commit refreshed cards when changed
+        run: |
+          git add -- assets/stats-light.svg assets/stats-dark.svg assets/stats.json
+          if git diff --cached --quiet; then
+            echo "Profile stats are unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh public profile stats"
+          git push origin HEAD:main
