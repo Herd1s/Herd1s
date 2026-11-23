@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "username": "Herd1s",
-  "updated_on": "2026-11-22",
+  "updated_on": "2026-11-23",
   "public_repositories": 12,
   "stars": 6,
   "repository_scope": "Owned public repositories, excluding forks; archived repositories included.",
@@ -14,10 +14,14 @@
     },
     {
       "language": "Python",
-      "repositories": 3
+      "repositories": 2
     },
     {
       "language": "Astro",
+      "repositories": 1
+    },
+    {
+      "language": "C#",
       "repositories": 1
     },
     {
@@ -32,8 +36,8 @@
   "contribution_scope": "Anonymously visible GitHub profile activity, possibly including private contribution counts enabled by the owner; no private details accessed.",
   "contributions": {
     "status": "current",
-    "retrieved_on": "2026-11-22",
-    "total": 117,
+    "retrieved_on": "2026-11-23",
+    "total": 119,
     "period": "last year, as displayed by GitHub",
     "source": "https://github.com/users/Herd1s/contributions",
     "days": [
@@ -1859,6 +1863,11 @@
       },
       {
         "date": "2026-11-22",
+        "level": 2,
+        "count": 2
+      },
+      {
+        "date": "2026-11-23",
         "level": 0,
         "count": 0
       }
@@ -1877,7 +1886,7 @@
     },
     {
       "name": "Control_study",
-      "language": "Python",
+      "language": "C#",
       "stars": 0
     },
     {
